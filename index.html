@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jayvee Garcia - Full Stack Developer specializing in Laravel, PHP, JavaScript, and MySQL. Portfolio showcasing projects, skills, and experience.">
+    <meta name="keywords" content="Full Stack Developer, Laravel, PHP, JavaScript, MySQL, Web Developer, Portfolio">
+    <meta name="author" content="Jayvee Garcia">
+    <meta name="theme-color" content="#0F172A">
+    <meta property="og:title" content="Jayvee Garcia | Full Stack Developer">
+    <meta property="og:description" content="Full Stack Developer specializing in Laravel, PHP, JavaScript, and MySQL">
+    <meta property="og:type" content="website">
+    <title>Jayvee Garcia | Full Stack Developer</title>
+
+    <!-- Font Awesome 6 (for social & UI icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Devicon (official technology logos) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Google Fonts: Inter & Sora -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Skip Navigation Link for Accessibility -->
+    <a href="#hero" class="skip-link">Skip to main content</a>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen" aria-hidden="true">
+        <span class="loading-logo">JGA</span>
+    </div>
+
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+    <!-- Background Blobs -->
+    <div class="bg-blobs" aria-hidden="true">
+        <div class="bg-blob bg-blob--1"></div>
+        <div class="bg-blob bg-blob--2"></div>
+        <div class="bg-blob bg-blob--3"></div>
+    </div>
+    <div class="dot-grid" aria-hidden="true"></div>
+
+    <!-- ========================================
+         NAVIGATION
+         ======================================== -->
+    <nav class="nav" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav__inner">
+            <a href="#hero" class="nav__logo" aria-label="Jayvee Garcia Alburo Home">JGA.</a>
+            <ul class="nav__links" id="navLinks" role="menubar">
+                <li role="none"><a href="#hero" class="nav__link active" role="menuitem">Home</a></li>
+                <li role="none"><a href="#about" class="nav__link" role="menuitem">About</a></li>
+                <li role="none"><a href="#skills" class="nav__link" role="menuitem">Skills</a></li>
+                <li role="none"><a href="#projects" class="nav__link" role="menuitem">Projects</a></li>
+                <li role="none"><a href="#experience" class="nav__link" role="menuitem">Experience</a></li>
+                <li role="none"><a href="#education" class="nav__link" role="menuitem">Education</a></li>
+                <li role="none"><a href="#contact" class="nav__link" role="menuitem">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========================================
+         HERO SECTION
+         ======================================== -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero__content">
+                <div class="hero__text reveal">
+                    <p class="hero__greeting">👋 Hello, I'm</p>
+                    <h1 class="hero__name">Jayvee Garcia Alburo</h1>
+                    <p class="hero__role">
+                        Full Stack Developer<br>
+                        <span class="typing-text" id="typingText" aria-live="polite"></span>
+                    </p>
+                    <p class="hero__description">
+                        Passionate about building elegant, scalable web applications with modern technologies.
+                        Specializing in <strong>Laravel</strong>, <strong>PHP</strong>, <strong>JavaScript</strong>,
+                        and <strong>MySQL</strong>.
+                    </p>
+                    <div class="hero__cta">
+                        <a href="#projects" class="btn btn--primary"><i class="fas fa-rocket"></i> View Projects</a>
+                        <a href="image/Resume - Jayvee Garcia Alburo.pdf" class="btn btn--outline" download="Jayvee_Garcia_Resume.pdf">
+                            <i class="fas fa-file-download"></i> Download Resume
+                        </a>
+                    </div>
+                    <div class="hero__socials">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:jayvee.garcia@email.com" class="social-icon" aria-label="Email" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero__visual reveal reveal-delay-1">
+                    <div class="hero__avatar-wrapper">
+                        <div class="hero__avatar-ring" aria-hidden="true"></div>
+                        <div class="hero__avatar">
+                            <img src="image/my-image.png" alt="Jayvee Garcia" class="hero__avatar-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         ABOUT SECTION
+         ======================================== -->
+    <section id="about">
+        <div class="container">
+            <span class="section__label reveal">About Me</span>
+            <h2 class="section__title reveal">Get to Know Me</h2>
+            <p class="section__subtitle reveal">A dedicated developer on a continuous learning journey.</p>
+            <div class="about__grid">
+                <div class="about__image-card reveal">
+                    <img src="image/my-image.png" alt="Jayvee Garcia" class="about__image">
+                </div>
+                <div class="reveal reveal-delay-1">
+                    <p style="color:var(--text-secondary);font-size:1.05rem;line-height:1.8;margin-bottom:1.5rem;">
+                        I'm a <strong>Full Stack Developer</strong> with a strong foundation in
+                        <strong>Laravel</strong>, <strong>PHP</strong>, <strong>JavaScript</strong>, and
+                        <strong>MySQL</strong>. I enjoy transforming complex problems into simple, beautiful,
+                        and intuitive web applications.
+                    </p>
+                    <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.7;margin-bottom:1.5rem;">
+                        I am passionate about web development and enjoy building responsive and user-friendly web applications. I continuously improve my skills by working on real projects and learning new technologies. My goal is to become a skilled full-stack developer and create applications that are useful, reliable, and easy to use.
+                    </p>
+                    <div class="about__stats">
+                        <div class="stat-card reveal reveal-delay-1">
+                            <div class="stat-card__number" data-count="7">7+</div>
+                            <div class="stat-card__label">Projects Completed</div>
+                        </div>
+                        <div class="stat-card reveal reveal-delay-2">
+                            <div class="stat-card__number" data-count="9">8</div>
+                            <div class="stat-card__label">Technologies Learned</div>
+                        </div>
+                        <div class="stat-card reveal reveal-delay-2">
+                            <div class="stat-card__number" data-count="1">1</div>
+                            <div class="stat-card__label">Internship Experience</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SKILLS SECTION (official Devicon logos)
+         ======================================== -->
+    <section id="skills">
+        <div class="container">
+            <span class="section__label reveal">Skills</span>
+            <h2 class="section__title reveal">Technologies I Work With</h2>
+            <p class="section__subtitle reveal">A curated set of tools and technologies I use to build amazing products.</p>
+            <div class="skills__grid" id="skillsGrid">
+                <!-- Frontend -->
+                <div class="skill-card reveal">
+                    <span class="skill-card__category">Frontend</span>
+                    <i class="devicon-html5-plain colored skill-card__icon"></i>
+                    <div class="skill-card__name">HTML</div>
+                    <div class="skill-card__bar">
+                        <div class="skill-card__bar-fill" data-width="90" style="width:0%"></div>
+                    </div>
+                </div>
+                <div class="skill-card reveal">
+                    <span class="skill-card__category">Frontend</span>
+                    <i class="devicon-css3-plain colored skill-card__icon"></i>
+                    <div class="skill-card__name">CSS</div>
+                    <div class="skill-card__bar">
+                        <div class="skill-card__bar-fill" data-width="85" style="width:0%"></div>
+                    </div>
+                </div>
+                <div class="skill-card reveal">
+                    <span class="skill-card__category">Frontend</span>
+                    <i class="devicon-javascript-plain colored skill-card__icon"></i>
+                    <div class="skill-card__name">JavaScript</div>
+                    <div class="skill-card__bar">
+                        <div class="skill-card__bar-fill" data-width="80" style="width:0%"></div>
+                    </div>
+                </div>
+                <div class="skill-card reveal">
+                    <span class="skill-card__category">Frontend</span>
+                    <i class="devicon-responsive-plain colored skill-card__icon"></i>
+                    <div class="skill-card__name">Responsive Design</div>
+                    <div class="skill-card__bar">
+                        <div class="skill-card__bar-fill" data-width="88" style="width:0%"></div>
+                    </div>
+                </div>
+                <!-- Backend -->
+                <div class="skill-card reveal">
+                    <span class="skill-card__category">Backend</span>
+                    <i class="devicon-php-plain colored skill-card__icon"></i>
+                    <div class="skill-card__name">PHP</div>
+                    <div class="skill-card__bar">
+                        <div class="skill-card__bar-fill" data-width="85" style="width:0%"></div>
+                    </div>
+                </div>
+                <div class="skill-card reveal">
+                    <span class="skill-card__category">Backend</span>
+                    <i class="devicon-laravel-plain colored skill-card__icon"></i>
+                    <div class="skill-card__name">Laravel</div>
+                    <div class="skill-card__bar">
+                        <div class="skill-card__bar-fill" data-width="82" style="width:0%"></div>
+                    </div>
+                </div>
+                <div class="skill-card reveal">
+                    <span class="skill-card__category">Backend</span>
+                    <i class="devicon-fastapi-plain colored skill-card__icon"></i>
+                    <div class="skill-card__name">REST API</div>
+                    <div class="skill-card__bar">
+                        <div class="skill-card__bar-fill" data-width="78" style="width:0%"></div>
+                    </div>
+                </div>
+                <!-- Database -->
+                <div class="skill-card reveal">
+                    <span class="skill-card__category">Database</span>
+                    <i class="devicon-mysql-plain colored skill-card__icon"></i>
+                    <div class="skill-card__name">MySQL</div>
+                    <div class="skill-card__bar">
+                        <div class="skill-card__bar-fill" data-width="85" style="width:0%"></div>
+                    </div>
+                </div>
+                <!-- Tools -->
+                <div class="skill-card reveal">
+                    <span class="skill-card__category">Tools</span>
+                    <i class="devicon-vscode-plain colored skill-card__icon"></i>
+                    <div class="skill-card__name">VS Code</div>
+                    <div class="skill-card__bar">
+                        <div class="skill-card__bar-fill" data-width="92" style="width:0%"></div>
+                    </div>
+                </div>
+                <div class="skill-card reveal">
+                    <span class="skill-card__category">Tools</span>
+                    <i class="devicon-apache-plain colored skill-card__icon"></i>
+                    <div class="skill-card__name">XAMPP</div>
+                    <div class="skill-card__bar">
+                        <div class="skill-card__bar-fill" data-width="85" style="width:0%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         PROJECTS SECTION
+         ======================================== -->
+    <section id="projects">
+        <div class="container">
+            <span class="section__label reveal">Projects</span>
+            <h2 class="section__title reveal">Featured Work</h2>
+            <p class="section__subtitle reveal">Showcasing projects that demonstrate my expertise and passion.</p>
+            <div class="projects__grid" id="projectsGrid">
+                <div class="project-card reveal">
+                    <div class="project-card__image">
+                        <img src="image/hotel-booking.png" alt="Hotel Booking System screenshot" loading="lazy">
+                    </div>
+                    <div class="project-card__body">
+                        <h3 class="project-card__title">Hotel Booking System</h3>
+                        <p class="project-card__desc">A full-featured hotel reservation platform with room management, booking calendar, and payment integration.</p>
+                        <div class="project-card__tags">
+                            <span class="project-card__tag">PHP</span>
+                            <span class="project-card__tag">MySQL</span>
+                            <span class="project-card__tag">JavaScript</span>
+                            <span class="project-card__tag">CSS</span>
+                            <span class="project-card__tag">HTML</span>
+                        </div>
+                        <div class="project-card__actions">
+                            <a href="https://github.com/jayvee-hue/automatic-octo-memory" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         EXPERIENCE SECTION
+         ======================================== -->
+    <section id="experience">
+        <div class="container">
+            <span class="section__label reveal">Experience</span>
+            <h2 class="section__title reveal">Professional Journey</h2>
+            <p class="section__subtitle reveal">Where I've applied my skills and grown as a developer.</p>
+            <div class="timeline reveal" id="experienceTimeline">
+                <!-- Timeline items generated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         EDUCATION SECTION
+         ======================================== -->
+    <section id="education">
+        <div class="container">
+            <span class="section__label reveal">Education</span>
+            <h2 class="section__title reveal">Academic Background</h2>
+            <p class="section__subtitle reveal">The foundation of my technical knowledge.</p>
+            <div class="timeline reveal" id="educationTimeline">
+                <!-- Timeline items generated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         CONTACT SECTION
+         ======================================== -->
+    <section id="contact">
+        <div class="container">
+            <span class="section__label reveal">Contact</span>
+            <h2 class="section__title reveal">Get In Touch</h2>
+            <p class="section__subtitle reveal">Have a project in mind? Let's talk about it.</p>
+            <div class="contact__grid">
+                <form class="contact__form reveal" id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your full name" required autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary" style="align-self:flex-start;"><i class="fas fa-paper-plane"></i> Send Message</button>
+                </form>
+                <div class="form-success" id="formSuccess" aria-live="polite">
+                    ✅ <strong>Message sent successfully!</strong><br>
+                    <span style="color:var(--text-muted);font-size:0.9rem;">I'll get back to you soon.</span>
+                </div>
+                <div class="contact__info reveal reveal-delay-1">
+                    <a href="mailto:jayveegarcia988@gmail.com" class="contact__info-card">
+                        <span class="contact__info-icon"><i class="fas fa-envelope"></i></span>
+                        <div>
+                            <strong>Email</strong><br>
+                            <span style="color:var(--text-muted);font-size:0.85rem;">jayveegarcia988@gmail.com</span>
+                        </div>
+                    </a>
+                    <a href="https://github.com/jayvee-hue" target="_blank" rel="noopener noreferrer" class="contact__info-card">
+                        <span class="contact__info-icon"><i class="fab fa-github"></i></span>
+                        <div>
+                            <strong>GitHub</strong><br>
+                            <span style="color:var(--text-muted);font-size:0.85rem;">https://github.com/jayvee-hue</span>
+                        </div>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact__info-card">
+                        <span class="contact__info-icon"><i class="fab fa-linkedin-in"></i></span>
+                        <div>
+                            <strong>LinkedIn</strong><br>
+                            <span style="color:var(--text-muted);font-size:0.85rem;">linkedin.com/in/jayveegarcia</span>
+                        </div>
+                    </a>    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER
+         ======================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__socials">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:jayvee.garcia@email.com" class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="footer__copy">© <span id="currentYear"></span> Jayvee Garcia Alburo. Built with 💙 and modern web technologies.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
